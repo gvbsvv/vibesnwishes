@@ -75,9 +75,11 @@ section h2 {
     gap: 1em;
     margin: 1em 0;
 }
-.gallery img {
-    width: 150px;
-    height: 150px;
+
+/* Specific styling for bangle and bracelet images */
+.gallery .bangle-image {
+    width: 216px;  /* 3 inches at 72 DPI */
+    height: 360px; /* 5 inches at 72 DPI */
     object-fit: cover;
     border-radius: 18px;
     border: 2px solid #ffeec3;
@@ -110,9 +112,4 @@ footer a {
 }
 footer a:hover {
     color: #fff4eb;
-}
-.bangle-image {
-    width: 3in;
-    height: 5in;
-    object-fit: cover; /* Maintains aspect ratio, crops if needed */
 }
