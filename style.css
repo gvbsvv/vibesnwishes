@@ -100,4 +100,19 @@ blockquote {
     color: #a03270;
 }
 
-foo
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #d45292;
+    color: #fff;
+    font-size: 1rem;
+    border-top: 4px solid #ffeec3;
+}
+
+footer a {
+    color: #ffeec3;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: #fff4eb;
+}
