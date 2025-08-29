@@ -69,27 +69,32 @@ section h2 {
     margin-top: 0;
 }
 
-/* Gallery layout */
+/* ---- GALLERY ---- */
+/* Use real physical units so each image renders exactly 2in x 2in.
+   box-sizing:border-box keeps the BORDER included in the 2in box. */
+:root { --tile: 2in; }
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 144px); /* 2-inch wide cells */
+    grid-template-columns: repeat(auto-fill, var(--tile));
     gap: 20px;
     margin: 1em 0;
     justify-content: flex-start;
 }
 
-/* Force images to exactly 2x2 inches */
 .gallery img {
-    width: 144px !important;     /* 2 inches */
-    height: 144px !important;    /* 2 inches */
-    object-fit: cover !important; /* crop to square, prevents stretching */
+    width: var(--tile);
+    height: var(--tile);
+    box-sizing: border-box;      /* include border within the 2in size */
+    object-fit: cover;           /* crop to square without stretching */
+    object-position: center;
+    display: block;
     border-radius: 18px;
     border: 2px solid #ffeec3;
     box-shadow: 0 2px 10px rgba(180,80,130,0.13);
     background: #fff;
-    display: block;
 }
-  
+
 blockquote {
     font-style: italic;
     background: #faf0fa;
